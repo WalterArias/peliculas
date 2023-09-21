@@ -1,3 +1,3 @@
 # PELICULAS ONLINE
 
-Version aprendices
+## Usamos react y localstorage
