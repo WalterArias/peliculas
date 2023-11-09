@@ -9,13 +9,15 @@ const RenderCondicional = () => {
     <>
       <h1>COMPONENTE RENDER</h1>
       <hr />
-      {ciudades.length > 0 ? (
+      {/*  {si la longitud del arreglo ciudades es mayor a 0 o no es nulo} */}
+      {ciudades.length > 0 || ciudades != null ? (
         <ul>
           {ciudades.map((ciudad, index) => {
             return <li key={index}>{ciudad}</li>;
           })}
         </ul>
       ) : (
+        /*   {de lo contrario} */
         <>
           <div className="alert alert-danger" role="alert">
             No hay Informacion para mostrar !
