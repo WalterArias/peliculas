@@ -8,6 +8,7 @@ export const Inicio = ({ peliculas, setPeliculas }) => {
   };
 
   const borrarPelicula = (id) => {
+    console.log(id);
     //leer la base de datos local actual y la transformamos en arrary (Iterable)
     let bdLocal = leerLS();
     //creamos un nuevo array filtrando por id
@@ -23,12 +24,14 @@ export const Inicio = ({ peliculas, setPeliculas }) => {
     e.preventDefault();
     console.log("click en editar");
   };
+
   useEffect(() => {
     leerLS();
   }, []);
+
   return (
     <>
-      {peliculas.length === 0 ? (
+      {peliculas === null || peliculas.length === 0 ? (
         <div className="alert alert-warning" role="alert">
           No hay peliculas en la base de datos
         </div>
